@@ -18,10 +18,11 @@
       padding: 60px 20px;
     }
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+   h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
 
     h2 {
       margin-bottom: 15px;
@@ -44,16 +45,100 @@
       font-size: 14px;
       color: #9ca3af;
     }
+    .logo {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}nav {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background: #020617;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+  letter-spacing: 3px;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 20px;
+}
+
+/* Logo Circle */
+.logo-circle {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+
+  /* Glass + Glow */
+  background: rgba(56, 189, 248, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(56, 189, 248, 0.8);
+  box-shadow:
+    0 0 25px rgba(56, 189, 248, 0.6),
+    0 0 60px rgba(56, 189, 248, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  color: #38bdf8;
+
+  transition: all 0.4s ease;
+  animation: pulse 3s infinite;
+}.logo-circle:hover {
+  transform: scale(1.1) rotate(2deg);
+  color: #ffffff;
+  box-shadow:
+    0 0 40px rgba(56, 189, 248, 1),
+    0 0 90px rgba(56, 189, 248, 0.9);
+}
+@keyframes pulse {
+  0% {
+    box-shadow:
+      0 0 20px rgba(56, 189, 248, 0.4),
+      0 0 40px rgba(56, 189, 248, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(56, 189, 248, 0.9),
+      0 0 80px rgba(56, 189, 248, 0.6);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(56, 189, 248, 0.4),
+      0 0 40px rgba(56, 189, 248, 0.2);
+  }
+}
+/* Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
   </style>
 </head>
 
 <body>
-
+<nav>
+  <div class="nav-logo">MAS</div>
+</nav>
   <!-- Hero -->
-  <section>
-    <h1>MODREN AGE SYMBOL</h1>
-    <p>Shaping the future of modern technology</p>
-  </section>
+ <section class="hero">
+  <div class="logo-circle">MAS</div>
+  <h1>MODREN AGE SYMBOL</h1>
+  <p>Shaping the future of modern technology</p>
+</section>
 
   <!-- About -->
   <section>
